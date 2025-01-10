@@ -1,0 +1,60 @@
+/* Container for all posts */
+.posts {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #d6b0d3; /* Light background for the whole posts section */
+    color: #333;  /* Dark color for text */
+}
+
+/* Styling each individual post */
+.post {
+    border: 1px solid #ddd;  /* Light border around each post */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #ffffff;  /* White background for each post */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s ease; /* Add smooth hover effect */
+}
+
+/* Add hover effect for post */
+.post:hover {
+    transform: translateY(-5px); /* Slightly lift the post on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Increase shadow on hover */
+}
+
+/* Styling for the post title */
+.post-header h3 {
+    font-size: 1.6em;
+    margin: 0;
+    color: #a89cb6;  /* Dark blue-gray color for title */
+    font-weight: bold;
+}
+
+/* Styling for the topic label */
+.post-topic {
+    margin-top: 10px;
+    color: #8457af;  /* Bright blue for topic */
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Styling for the likes count */
+.post-likes {
+    margin-top: 5px;
+    color: #ec6ea3;  /* Red color for likes count to make it stand out */
+    font-size: 0.9em;
+}
+
+/* Optional: Style the main heading */
+.posts h2 {
+    font-size: 2.2em;
+    color: #34495e;  /* Dark gray-blue for the heading */
+    margin-bottom: 20px;
+    text-align: center;  /* Center the main heading */
+}
+
+/* Optional: Add some padding around the posts */
+.posts .post + .post {
+    border-top: 2px solid #ecf0f1;  /* Add a subtle border between posts */
+}
