@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
-import { AllPosts } from "./components/Posts/AllPosts"
+import { Posts } from "./components/Posts/Posts"
 
 export const App = () => {
   
 
   return <div>
-    <AllPosts />
+    <Posts />
     
     
     

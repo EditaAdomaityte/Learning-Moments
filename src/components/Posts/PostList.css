@@ -51,10 +51,59 @@
     font-size: 2.2em;
     color: #34495e;  /* Dark gray-blue for the heading */
     margin-bottom: 20px;
-    text-align: center;  /* Center the main heading */
+    text-align: left;  /* Center the main heading */
 }
 
 /* Optional: Add some padding around the posts */
 .posts .post + .post {
     border-top: 2px solid #ecf0f1;  /* Add a subtle border between posts */
 }
+
+/* Container for the filter */
+.filter {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Space between input and select */
+    padding: 20px;
+    max-width: px; /* Limits the width of the filter */
+    margin: 0 auto; /* Centers the filter */
+    background-color: #796286; /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Styling for the search input */
+  .post-search {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .post-search:focus {
+    border-color: #4caf50; /* Green border on focus */
+  }
+  
+  /* Styling for the select dropdown */
+  select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Focus effect for the select dropdown */
+  select:focus {
+    border-color: #4caf50; /* Green border on focus */
+  }
+  
+  /* Styling for the option items */
+  option {
+    padding: 10px;
+    font-size: 16px;
+  }
