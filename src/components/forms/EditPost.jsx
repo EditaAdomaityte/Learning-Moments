@@ -3,8 +3,9 @@ import "./Forms.css";
 import {
   getAllTopics,
   getPostByPostId,
+  updatePost,
 } from "../../services/postServices/postServices";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export const EditPost = ({ currentUser }) => {
   const [post, setPost] = useState({});
@@ -12,6 +13,7 @@ export const EditPost = ({ currentUser }) => {
   const [selectedTopic, setSelectedTopic] = useState(0);
 
   const { postId } = useParams();
+  const navigate=useNavigate()
 
   useEffect(() => {
     getPostByPostId(postId).then((data) => {
@@ -26,7 +28,23 @@ export const EditPost = ({ currentUser }) => {
     });
   }, []);
 
-  const handleSave = () => {};
+  const handleSave = (event) => {
+    event.preventDefault();
+    const editedPost={
+      id: post.id,
+      topicId: post.topicId,
+      userId: currentUser.id,
+      title: post.title,
+      date: new Date(),
+      body: post.body
+    }
+
+    updatePost(editedPost).then(()=>[
+      navigate(`/MyPosts`)
+    ])
+
+
+  };
 
   return (
     <form className="form-group">

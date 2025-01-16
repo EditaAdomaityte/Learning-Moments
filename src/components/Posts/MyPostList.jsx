@@ -1,13 +1,15 @@
 import "./PostList.css";
 
 import { useEffect, useState } from "react";
-import { deletePost, getAllMyPosts } from "../../services/postServices/postServices";
+import {
+  deletePost,
+  getAllMyPosts,
+} from "../../services/postServices/postServices";
 import "./PostList.css";
 import { Link, useNavigate } from "react-router-dom";
 
 export const MyPostList = ({ currentUser }) => {
   const [allMyPosts, setAllMyPosts] = useState([]);
-
 
   useEffect(() => {
     getAllMyPosts(currentUser.id).then((myPostArray) => {
@@ -15,15 +17,13 @@ export const MyPostList = ({ currentUser }) => {
     });
   }, [currentUser.id]);
 
-  const handleDelete=(post)=>{
-   
-
-    deletePost(post).then(()=>{
+  const handleDelete = (post) => {
+    deletePost(post).then(() => {
       getAllMyPosts(currentUser.id).then((myPostArray) => {
         setAllMyPosts(myPostArray);
-    
-    })})}
-        
+      });
+    });
+  };
 
   return (
     <>
@@ -39,7 +39,10 @@ export const MyPostList = ({ currentUser }) => {
                 </Link>
               </div>
               <div className="btn-container">
-                <button className="btn btn-edit" onClick={() => handleDelete(post)}>
+                <button
+                  className="btn btn-edit"
+                  onClick={() => handleDelete(post)}
+                >
                   Delete
                 </button>
               </div>
@@ -49,4 +52,4 @@ export const MyPostList = ({ currentUser }) => {
       </div>
     </>
   );
-}
+};
