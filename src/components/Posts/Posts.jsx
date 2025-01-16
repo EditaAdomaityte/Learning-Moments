@@ -64,7 +64,7 @@ export const Posts = () => {
         {filteredPosts.map((post) => {
           return (
             <Link to={`/posts/${post.id}`} key={post.id}>
-              <PostList post={post}/>{" "}
+              <PostList post={post} />{" "}
             </Link>
           );
         })}
