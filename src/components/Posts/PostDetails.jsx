@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   assignLike,
   getPostByPostId,
@@ -10,6 +10,8 @@ import "./PostList.css";
 export const PostDetails = ({ currentUser }) => {
   const [post, setPost] = useState({});
 
+
+  const navigate = useNavigate();
   const { postId } = useParams();
 
   useEffect(() => {
@@ -52,13 +54,12 @@ export const PostDetails = ({ currentUser }) => {
       </div>
       <div className="btn-container">
         {post.userId === currentUser.id && (
-          <button className="btn btn-edit">Edit</button>
+          <button className="btn btn-edit" onClick={()=>{navigate(`/posts/${postId}/edit` )}}>Edit</button>
         )}
         {post.userId !== currentUser.id && (
           <button className="btn btn-like" onClick={handleLike}>
             👍
-          </button>
-        )}
+          </button>)}
       </div>
     </section>
   );

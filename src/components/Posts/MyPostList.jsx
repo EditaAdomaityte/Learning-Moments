@@ -8,7 +8,6 @@ import { Link, useNavigate } from "react-router-dom";
 export const MyPostList = ({ currentUser }) => {
   const [allMyPosts, setAllMyPosts] = useState([]);
 
-  const navigate=useNavigate()
 
   useEffect(() => {
     getAllMyPosts(currentUser.id).then((myPostArray) => {
@@ -17,10 +16,13 @@ export const MyPostList = ({ currentUser }) => {
   }, [currentUser.id]);
 
   const handleDelete=(post)=>{
+   
+
     deletePost(post).then(()=>{
-        navigate("/MyPosts")
+      getAllMyPosts(currentUser.id).then((myPostArray) => {
+        setAllMyPosts(myPostArray);
     
-    })}
+    })})}
         
 
   return (
@@ -37,7 +39,7 @@ export const MyPostList = ({ currentUser }) => {
                 </Link>
               </div>
               <div className="btn-container">
-                <button className="btn btn-edit" onClick={handleDelete(post)}>
+                <button className="btn btn-edit" onClick={() => handleDelete(post)}>
                   Delete
                 </button>
               </div>
