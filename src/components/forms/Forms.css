@@ -37,3 +37,77 @@ fieldset {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
+/* General form styling */
+.form-group {
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light gray background */
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333; /* Dark gray text */
+  margin-bottom: 20px;
+}
+
+/* Fieldset styling */
+fieldset {
+  border: none;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #555; /* Medium gray */
+  margin-bottom: 8px;
+}
+
+/* Input field styling */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px;
+  background-color: #fff;
+  transition: border 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border: 1px solid #888; /* Medium gray border when focused */
+}
+
+/* Button styling */
+.form-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #5f6368; /* Neutral dark gray */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-btn:hover {
+  background-color: #4a4f54; /* Slightly darker gray on hover */
+}
+
+.btn-primary {
+  background-color: #5f6368;
+}
+
+.btn-primary:hover {
+  background-color: #4a4f54;
+}

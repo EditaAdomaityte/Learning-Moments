@@ -38,9 +38,9 @@ export const EditPost = ({ currentUser }) => {
       body: post.body
     }
 
-    updatePost(editedPost).then(()=>[
+    updatePost(editedPost).then(()=>{
       navigate(`/MyPosts`)
-    ])
+  })
 
 
   };

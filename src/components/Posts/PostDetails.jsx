@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   assignLike,
   getPostByPostId,
@@ -36,7 +36,7 @@ export const PostDetails = ({ currentUser }) => {
       <header className="post-header">{post.title}</header>
       <div>
         <span className="post-info">Author:</span>
-        {post.user?.fullName}
+        <Link to={`/Profile/${post.userId}`} >{post.user?.fullName}</Link>
       </div>
       <div>
         <span className="post-info">Topic:</span>

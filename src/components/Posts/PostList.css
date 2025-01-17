@@ -2,17 +2,17 @@
 .posts {
   padding: 20px;
   font-family: "Arial", sans-serif;
-  background-color: #d6b0d3; /* Light background for the whole posts section */
+  background-color:#ffffff; /* Light background for the whole posts section */
   color: #333; /* Dark color for text */
 }
 
 /* Styling each individual post */
 .post {
-  border: 1px solid #ddd; /* Light border around each post */
+  border: 1px solid #716969; /* Light border around each post */
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 8px;
-  background-color: #ffffff; /* White background for each post */
+  background-color: #dededd; /* White background for each post */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   transition: transform 0.2s, box-shadow 0.2s ease; /* Add smooth hover effect */
 }
@@ -20,7 +20,7 @@
 /* Add hover effect for post */
 .post:hover {
   transform: translateY(-5px); /* Slightly lift the post on hover */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Increase shadow on hover */
+  box-shadow: 0 5px 15px rgba(44, 15, 15, 0.1); /* Increase shadow on hover */
 }
 
 /* Styling for the post title */
@@ -34,7 +34,7 @@
 /* Styling for the topic label */
 .post-topic {
   margin-top: 10px;
-  color: #8457af; /* Bright blue for topic */
+  color: #45404b; /* Bright blue for topic */
   font-size: 1em;
   font-weight: bold;
 }
@@ -42,14 +42,14 @@
 /* Styling for the likes count */
 .post-likes {
   margin-top: 5px;
-  color: #ec6ea3; /* Red color for likes count to make it stand out */
+  color: #3f202d; /* Red color for likes count to make it stand out */
   font-size: 0.9em;
 }
 
 /* Optional: Style the main heading */
 .posts h2 {
   font-size: 2.2em;
-  color: #34495e; /* Dark gray-blue for the heading */
+  color: #344556; /* Dark gray-blue for the heading */
   margin-bottom: 20px;
   text-align: left; /* Center the main heading */
 }
@@ -67,7 +67,7 @@
   padding: 20px;
   max-width: px; /* Limits the width of the filter */
   margin: 0 auto; /* Centers the filter */
-  background-color: #796286; /* Light background */
+  background-color: #3e3345; /* Light background */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
@@ -83,7 +83,7 @@
 }
 
 .post-search:focus {
-  border-color: #4caf50; /* Green border on focus */
+  border-color: #4c7aaf; /* Green border on focus */
 }
 
 /* Styling for the select dropdown */
@@ -99,7 +99,7 @@ select {
 
 /* Focus effect for the select dropdown */
 select:focus {
-  border-color: #4caf50; /* Green border on focus */
+  border-color: #4c61af; /* Green border on focus */
 }
 
 /* Styling for the option items */
@@ -134,4 +134,5 @@ section.post {
 .btn-container {
   display: flex;
   justify-content: flex-end;
+  color: #3f202d;
 }
