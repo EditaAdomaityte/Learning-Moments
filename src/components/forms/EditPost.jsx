@@ -10,7 +10,6 @@ import { useNavigate, useParams } from "react-router-dom";
 export const EditPost = ({ currentUser }) => {
   const [post, setPost] = useState({});
   const [allTopics, setAllTopics] = useState([]);
-  const [selectedTopic, setSelectedTopic] = useState(0);
 
   const { postId } = useParams();
   const navigate=useNavigate()

@@ -52,3 +52,12 @@ export const updatePost=(post)=>{
     }
     )
 }
+
+export const getLikesAndPostsByUserId=(userId)=>{
+    return fetch(`http://localhost:8088/likes?userId=${userId}&_expand=post`).then((res)=>res.json())
+}
+
+export const deleteLike = (like)=>{
+    return fetch(`http://localhost:8088/likes/${like.id}`, {
+        method: "DELETE",})
+  } 

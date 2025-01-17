@@ -26,7 +26,9 @@ export const PostDetails = ({ currentUser }) => {
       userId: currentUser.id,
       postId: post.id,
     };
-    assignLike(postLike);
+    assignLike(postLike).then(()=>{
+      navigate('/Favorites')
+    });
   };
 
   return (
